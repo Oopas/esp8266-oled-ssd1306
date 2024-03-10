@@ -311,5 +311,11 @@ class OLEDDisplayUi {
     OLEDDisplayUiState* getUiState();
 
     int16_t update();
+
+    FrameCallback* Get_Frame();
+    
+    uint8_t Get_Frame_Count();
+    
+    uint8_t Get_Frame_State();
 };
 #endif
