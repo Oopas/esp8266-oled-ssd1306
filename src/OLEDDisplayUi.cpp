@@ -469,3 +469,15 @@ uint8_t OLEDDisplayUi::getNextFrameNumber(){
   if (this->nextFrameNumber != -1) return this->nextFrameNumber;
   return (this->state.currentFrame + this->frameCount + this->state.frameTransitionDirection) % this->frameCount;
 }
+
+FrameCallback * OLEDDisplayUi::Get_Frame() {
+  return (this->frameFunctions);
+}
+
+uint8_t OLEDDisplayUi::Get_Frame_Count() {
+  return (this->frameCount);
+}
+
+uint8_t OLEDDisplayUi::Get_Frame_State() {
+  return (this->state.currentFrame);
+}
